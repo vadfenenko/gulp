@@ -1,0 +1,23 @@
+
+$desktop-width: 1100px;
+$mobile-width-only: 1099px;
+$tablet-width: 768px;
+$mobile: 480px;
+
+$retina-dpi-2x: 144dpi;
+$retina-dppx-2x: 1.5dppx;
+$retina-dpi-3x: 288dpi;
+$retina-dppx-3x: 3dppx;
+$main-background: #444444;
+
+@media(min-width: $mobile-width){
+    
+}
+
+@media(min-width: $tablet-width){
+    
+}
+  
+@media(min-width: $desktop-width){
+    
+}

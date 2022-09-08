@@ -1,0 +1,48 @@
+
+html, body { height: 100%; margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+*,*:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: inherit; }
+main, aside, nav, footer, header, section { display: block; }
+a { text-decoration: none;}
+img{ max-width: 100%; height: auto; }
+input, button, textarea{ font-family: inherit;  font-size: 100%; }
+h1, h2, h3, h4, h5, h6 { font-family: inherit; font-weight: inherit; margin-block-start: 0;margin-block-end: 0; margin: 0;}
+ul{padding-inline-start: 0; margin-block-start: 0; margin-block-end: 0; margin-inline-start: 0; margin-inline-end: 0;}
+figure{margin: 0;}
+p{margin-block-start:0;margin-block-end:0;}
+picture{margin:0; padding:0;display: block;}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+    position: relative;
+    min-width: 32rem;
+    min-height: 100%;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 2rem; 
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+.hidden{
+    display: none;
+}
+  
+.js-lock-scroll{
+    overflow: hidden;
+}
+  

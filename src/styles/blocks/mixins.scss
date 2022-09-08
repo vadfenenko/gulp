@@ -1,0 +1,31 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("/fonts/#{$file_name}.woff2") format("woff2"), url("/fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+
+@mixin list-style-reset {  //@include list-style-reset;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+@mixin visually-hidden { //@include visually-hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+   
