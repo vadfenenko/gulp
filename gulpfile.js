@@ -26,8 +26,8 @@ export const html = () => {
   return gulp.src('src/index.html')
   .pipe(fileInclude())
   .pipe(htmlmin({ 
-	removeComments: true,
-	collapseWhitespace: true,
+	removeComments: false, // false/true (production = true)
+	collapseWhitespace: false, // false/true (production = true)
  }))
   .pipe(gulp.dest('dist'))
   .pipe(browserSync.stream())
@@ -50,10 +50,11 @@ export const scss = () => {
 
 //JavaScript
 export const js = () => {
-	return gulp.src('src/scripts/**/*.js',{sourcemaps: true})
+	return gulp.src('src/scripts/main.js',{sourcemaps: true})
 	.pipe(babel())
 	.pipe(webpackStream({
-		mode:'development' // development / production
+		mode:'development', // development / production
+		devtool:'source-map', 
 	}))
 	.pipe(gulp.dest('dist/scripts',{sourcemaps: true}))
 	.pipe(browserSync.stream())
@@ -115,3 +116,5 @@ export default gulp.series(
   gulp.parallel(html, scss, js, images, fonts),
   gulp.parallel(watcher, server),
 );
+
+
